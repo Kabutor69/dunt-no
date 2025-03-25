@@ -19,7 +19,7 @@ document.querySelector(".ham").addEventListener("click", () => {
 });
 async function displayvideo() {
   // Fetch the list of folders inside the /videos/ directory
-  let response = await fetch(`https://kabutor69.github.io/dunt-no//videos/`);
+  let response = await fetch(`/videos/`);
   console.log(response);
 
   // Get the HTML content of the directory listing
@@ -46,7 +46,7 @@ async function displayvideo() {
     // Now, for each folder, we need to fetch its contents (subfolders or video files)
     try {
       // Fetch the metadata from the info.json file of the folder
-      let metadataResponse = await fetch(`https://kabutor69.github.io/dunt-no//videos/${folder}/info.json`);
+      let metadataResponse = await fetch(`/videos/${folder}/info.json`);
       console.log(metadataResponse);
 
       // Parse the JSON response containing video metadata (like title, description, etc.)
@@ -56,12 +56,12 @@ async function displayvideo() {
       let ved = document.querySelector(".ved");
 
       // Get the list of video files inside the folder (assuming they are mp4 files)
-      let videoFiles = await getVideoFiles(`https://kabutor69.github.io/dunt-no//videos/${folder}`);
+      let videoFiles = await getVideoFiles(`/videos/${folder}`);
 
       // Loop through each video file in the folder and display it
       for (let videoIndex = 0; videoIndex < videoFiles.length; videoIndex++) {
         const videoFile = videoFiles[videoIndex];
-        const videoUrl = `https://kabutor69.github.io/dunt-no//videos/${folder}/${videoFile}`;
+        const videoUrl = `/videos/${folder}/${videoFile}`;
 
         // Get the video duration dynamically
         let videoDuration = await getVideoDuration(videoUrl);
@@ -77,7 +77,7 @@ async function displayvideo() {
             <a href="${videoUrl}">
               <div class="relative w-full">
                 <div class="w-full bg-gray-900 thumbnail-aspect-ratio bg-no-repeat bg-contain rounded"
-                     style="background-image: url(https://kabutor69.github.io/dunt-no//videos/${folder}/cover.png); background-position: 50% 50%;">
+                     style="background-image: url(/videos/${folder}/cover.png); background-position: 50% 50%;">
                 </div>
                 <div class="absolute inset-0 z-10 grid time">
                   <span class="p-1 justify-self-end self-end">
