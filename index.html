@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiggaHub</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+        .networkbar {
+            background-color: black;
+        }
+
+        .link {
+            color: #c6c6c6;
+            text-transform: uppercase;
+            padding: 5px 18.3px;
+            font-size: 11px;
+        }
+
+        .link:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .header {
+            height: 100%;
+            border-top: 1px solid #555;
+            border-bottom: 1px solid #242424;
+            background-color: #333;
+        }
+
+        .header-top {
+            grid-template-columns: 200px 1fr 220px;
+            height: 60px;
+            max-width: 1323px;
+        }
+
+        .header-bottom {
+            border-top: 1px solid #242424;
+        }
+
+        .header-links {
+            max-width: 1323px;
+        }
+
+        .header-link {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            min-width: 60px;
+            text-align: center;
+            display: block;
+            height: 100%;
+            padding-bottom: .5rem;
+            padding-top: .5rem;
+            width: 100%;
+        }
+
+        .header-link.active {
+            --tw-border-opacity: 1;
+            border-color: rgba(255, 144, 0, var(--tw-border-opacity));
+            border-width: 2px;
+        }
+
+        .thumbnail-aspect-ratio {
+            aspect-ratio: 1.77777778;
+        }
+        
+    </style>
+</head>
+
+<body class="">
+    <div class="networkbar background-black relative text-center hidden sm:flex justify-center gap-6 ">
+        <a href="https://discord.com/" class="text-white no-underline link">DISCORD</a>
+        <a href="https://instagram.com/" class="text-white no-underline link">INSTAGRAM</a>
+        <a href="https://tiktok.com/" class="text-white no-underline link">TIKTOK</a>
+        <a href="https://x.com/" class="text-white no-underline link">X(TWITER)</a>
+        <a href="https://youtube.com/" class="text-white no-underline link">YOUTUBE</a>
+    </div>
+    <header class="header">
+        <div class="header-top grid grid-lol grid-cols-3 gap-10 m-auto justify-items-center items-center ">
+            <div class="flex">
+                <div class="sm:hidden flex ham">
+                    <button class="bg-no-repeat bg-contain bg-center w-30px h-30px mt-10px items-center"
+                        style="background-image:url(hamburger.svg)"><img src="hamburger.svg" width="40" alt=""></button>
+                </div>
+                <a href="index.html"><img src="logo.png" alt="" width="150" height="26"></a>
+            </div>
+            <div class="hidden sm:block serch">
+                <form action="/search">
+                    <input class="text-white bg-neutral-800 p-2 rounded focus:border-1 focus:border-primary" type="text"
+                        placeholder="Search NiggaHub ">
+                </form>
+            </div>
+            <div class="hidden sm:block">
+                <div class="text text-zinc-300 grid grid-cols-1 md:grid-cols-2 gap-1 ">
+                    <a class="hover:text-white" href="#">Login</a>
+                    <a class="hover:text-white" href="#">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-links h-full m-auto items-center sm:grid-flow-col sm:auto-cols-auto hidden sm:grid">
+                <div class="header-link active">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="header-link">
+                    <a href="#">Nigga Videos</a>
+                </div>
+                <div class="header-link">
+                    <a href="#">Niggastars</a>
+                </div>
+                <div class="header-link">
+                    <a href="#">Community</a>
+                </div>
+                <div class="hidden sm:hidden log justify-center items-center">
+                    <div>
+                        <a class="header-link" href="#">Login or Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="block">
+        <div class="p-3  max-w-7xl m-auto">
+            <div>
+                <h1 class="text-2xl font-bold mb-3">Hot Nigga Videos Worldwide</h1>
+                <div class="grid gap-3 grid-cols-1 sm:grid-cols-3 md:grid-cols-4 ved ">
+             
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html> 
