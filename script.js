@@ -17,6 +17,7 @@ document.querySelector(".ham").addEventListener("click", () => {
     log.display = "none";
   }
 });
+
 async function displayvideo() {
   // Fetch the list of folders inside the https://kabutor69.github.io/dunt-no/videos/ directory
   let response = await fetch(`https://kabutor69.github.io/dunt-no/videos/`);
@@ -155,6 +156,5 @@ function formatDuration(seconds) {
     remainingSeconds
   ).padStart(2, "0")}`;
 }
-
 
 displayvideo();
